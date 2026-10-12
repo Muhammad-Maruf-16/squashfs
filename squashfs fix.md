@@ -69,7 +69,7 @@ LINUX /zImage
 INITRD /uInitrd
 
 FDT /dtb/amlogic/meson-gxl-s905x-p212.dtb
-APPEND root=/dev/mmcblk0p2 rootfstype=squashfs ro console=ttyAML0,115200n8 console=tty0 no_console_suspend consoleblank=0 fsck.fix=yes fsck.repair=yes net.ifnames=0 overlay=yes
+APPEND root=LABEL=ROOTFS rootflags=data=writeback rw console=ttyAML0,115200n8 c>
 ```
 
 Simpan: **Ctrl+X → Y → Enter**
