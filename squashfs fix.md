@@ -257,8 +257,14 @@ lsblk | grep sd
 sudo mkdir -p /mnt
 sudo mount /dev/sdX1 /mnt
 sudo cp /tmp/uInitrd-new /mnt/uInitrd
+
+sudo nano /mnt/extlinux/extlinux.conf
+APPEND root=/dev/mmcblk0p2 rootfstype=squashfs ro console=ttyAML0,115200n8 console=tty0 no_console_suspend consoleblank=0 fsck.fix=yes fsck.repair=yes net.ifnames=0 overlay=yes
+
 sudo umount /mnt
 sudo sync
+
+
 ```
 
 > **Catatan:** Setelah copy uInitrd, verifikasi `overlay=yes` sudah ada di
